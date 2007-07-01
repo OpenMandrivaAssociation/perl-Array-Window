@@ -2,8 +2,8 @@
 
 Summary:	Array-Window Perl module: calculate windows/subsets/pages of arrays
 Name:		perl-%{real_name}
-Version:	0.4
-Release: %mkrel 2
+Version:	1.01
+Release: %mkrel 1
 License:	GPL or Artistic
 Group:		Development/Perl
 URL:		http://search.cpan.org/dist/%{real_name}
