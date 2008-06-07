@@ -1,16 +1,16 @@
-%define real_name Array-Window
+%define module Array-Window
 
 Summary:	Array-Window Perl module: calculate windows/subsets/pages of arrays
-Name:		perl-%{real_name}
+Name:		perl-%{module}
 Version:	1.02
 Release: %mkrel 1
 License:	GPL or Artistic
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{real_name}
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Array/%{real_name}-%{version}.tar.bz2
-BuildRequires:	perl-devel
+URL:		http://search.cpan.org/dist/%{module}
+Source:     http://www.cpan.org/modules/by-module/Array/%{module}-%{version}.tar.gz
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRequires:	perl(Params::Util)
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 Many applications require that a large set of results be broken down
@@ -20,7 +20,7 @@ these windows. It is very flexible and permissive, making adjustments to
 the window as needed.
 
 %prep
-%setup -q -n %{real_name}-%{version} 
+%setup -q -n %{module}-%{version} 
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -37,7 +37,7 @@ rm -rf %{buildroot}
 %files
 %defattr(-,root,root)
 %doc Changes README
-%{perl_vendorlib}/Array/Window.pm
+%{perl_vendorlib}/Array
 %{_mandir}/*/*
 
 
