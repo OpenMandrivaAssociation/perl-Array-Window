@@ -3,7 +3,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Release:	4
 
 Summary:	Array-Window Perl module: calculate windows/subsets/pages of arrays
 License:	GPL+ or Artistic
