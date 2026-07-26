@@ -1,15 +1,13 @@
 %define upstream_name    Array-Window
-%define upstream_version 1.02
-
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	5
+Version:	1.02
+Release:	6
 
 Summary:	Array-Window Perl module: calculate windows/subsets/pages of arrays
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Array/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://metacpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/Array/%{upstream_name}-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -24,7 +22,7 @@ these windows. It is very flexible and permissive, making adjustments to
 the window as needed.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -47,9 +45,7 @@ make test
 
 * Wed Jul 29 2009 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 1.20.0-1mdv2011.0
 + Revision: 402981
-- rebuild using %%perl_convert_version
-
-* Fri Aug 08 2008 Thierry Vignaud <tv@mandriva.org> 1.02-2mdv2009.0
+- rebuild using %1.02 Fri Aug 08 2008 Thierry Vignaud <tv@mandriva.org> 1.02-2mdv2009.0
 + Revision: 268369
 - rebuild early 2009.0 package (before pixel changes)
 
